@@ -13,6 +13,9 @@ class generateKey:
     def returnValue(phone):
         return str(phone) + str(datetime.date(datetime.now())) + "Some Random Secret Key"
 
+# Time after which OTP will expire
+EXPIRY_TIME = 300 # seconds (5  minutes)
+
 class GenerateOTP(APIView):
     # Get to Create a call for OTP
     @staticmethod
